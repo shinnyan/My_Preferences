@@ -1,0 +1,109 @@
+# EC Standard Login Environment -*- sh -*-
+# user .aliases file
+# $Source: /usr/cvs/cvsrep/ec_environ-1.0/release/user/aliases,v $
+# $Revision: 1.1 $
+
+# You may place your personal aliases here or in .cshrc.$USER
+#
+# examples:
+# alias . exit
+# alias e emacs
+# alias telnet ssh2
+
+set autoexpand
+
+# SSH to other sites
+# Folsom:
+alias fmlogin 'ssh fm-login.fm.intel.com'
+# Chandler: 
+alias chlogin 'ssh ch-login.ch.intel.com'
+# Israel: 
+alias iillogin 'ssh iil-login.iil.intel.com'
+# India: 
+alias iindlogin 'ssh iind-login.iind.intel.com'
+# Austin:
+alias anlogin 'ssh an-login.an.intel.com' 
+# Oregon: 
+alias pdxlogin 'ssh pdx-login.pdx.intel.com'
+# Rio Rancho: 
+alias rrlogin 'ssh rr-login.rr.intel.com' 
+# Santa Clara: 
+alias sclogin 'ssh sc-login.sc.intel.com' 
+# Hudson: 
+alias hdlogin 'ssh hd-login.hd.intel.com' 
+# Fort Collins: 
+alias fclogin 'ssh fc-login.fc.intel.com' 
+# Guadalajara, Mexico: 
+alias gmlogin 'ssh gm-login.zpn.intel.com' 
+# Penang: 
+alias pnglogic 'ssh png-login.png.intel.com' 
+ 
+
+alias shell 'exec /usr/intel/bin/tcsh -f'
+
+alias xcsd 'Xcsd &'
+alias grep 'grep --color'
+# set xterm title to current dir
+alias cwdcmd 'xtset -t -i %U"@"%h": "%D'
+#alias cwdcmd 'xtermset -T $USER"@"$HOST": "$PWD -n $HOST": "$PWD'
+cd .
+# Vi Bindkey for pglnoble05
+if ( $HOST =~ "pglnoble*") then
+    bindkey -v
+endif
+
+#blinking ">" prompt
+#set prompt="%{^[[44;32;1m%}%U%n%u%{^[[1;33m%}@%{^[[1;31m%}%m%{^[[1;33m%}:%{^[[34m%}%c2 %{^[[0;32m%}%\!%{^[[1;5m%}%#%{^[[0m%} "
+set prompt="%{^[[44;32;1m%}%U%n%u%{^[[1;33m%}@%{^[[1;31m%}%m%{^[[1;33m%}:%{^[[34m%}%c2 %{^[[0;32m%}%\!%{^[[1m%}%#%{^[[0m%} "
+
+alias new_vnc 'vncserver -geometry 1920x1080 -depth 24 -r -randr 1920x1080,800x600,1024x768,1152x824,1280x1024,1400x1050,1600x900,1600x1200,1920x1200,3520x900,3520x1200,3520x1100 -alwaysshared'
+# list file only / list dir
+alias lf 'ls -l|egrep -v '^d''
+alias ldir 'ls -l|egrep '^d''
+alias setupTool 'source /p/com/env/psetup/prod/bin/setupTool -roam'
+alias stopwatch 'bash ~/scripts/stopwatch.bash'
+
+alias coe69d8 '/p/cse/proc/cad/toolsetup.pl -p coe69all -config dot8 -b allsch -t opus_sch -d -w sch -ov /nfs/png/disks/png_coe69_disk071/stan70 -ot tool_overrides.ot'
+
+alias coe714 '/p/socenv/cents/proc/bin/toolsetup.pl -p coe71 -config dot4_ann -b allsch -t opus_sch -d -w sch'
+alias 32nmopifev '/p/cse/proc/cad/toolsetup.pl -p coe69all -config dot8 -t opus_sch -d -w sch -ov /nfs/png/disks/png_coe69_disk066/stan70 -at formal'
+
+alias vnchome 'xrandr -s 0; FvwmCommand Restart'
+alias vncwork 'xrandr -s 8; FvwmCommand Restart'
+
+# Invoke 1271 UE
+alias coe71opus '/p/socenv/cents/proc/bin/toolsetup.pl -p coe71 -config dot1 -m phs2 -d -t opus_sch -w ckt'
+alias coe71all '/p/socenv/cents/proc/bin/toolsetup.pl -p coe71 -config dot1 -t alltools -d -b allsch:alllay:allctl -m phs2'
+
+# Invoke 1273 UE alltools-USB-PROD
+alias coe73 '/p/coeenv/cents/proc/bin/toolsetup.pl -p coe73 -config 73p4sles11latest -t alltools -d -b usb:avr -ov /nfs/png/disks/png_coe73_disk044/stan70'
+alias 73p1latest '/p/coeenv/cents/proc/bin/toolsetup.pl -p coe73 -config 73p1sles11latest -t alltools -d -b allprd -ov /nfs/png/disks/png_coe73_disk044/stan70'
+
+# HDK setup
+alias hdk_setproj 'wash -n soc hdk10nm hdk10nmproc soc73 soc73proc coeenv coe73 coe73lay hdk22nm hdk22nmproc -c "/p/hdk/bin/setproj -p \!:1 -cfg \!:2"'
+
+# phdk73
+alias phdk73tgp 'wash -n soc icp tgp soc73 soc73proc phdk73rtl -c "/p/hdk/bin/setproj -p phdk73 -cfg TGPLPA0P05"'
+alias phdk73setup 'setup -t sd -b phdk73 -ov /tmp/stan70 -n phdk73'
+
+# c73 dir databases
+alias proj_dir 'cd /nfs/png/disks/png_coe73_disk022/stan70/'
+
+#alias diff 'diff -y --suppress-common-lines'
+
+# iHDK
+if ( $EC_SITE =~ "fm" ) alias iHDK 'wash -n coe73 coe73lay coeenv hdk10nm hdk10nmproc soc soc73 soc75rtl hdk22nm hdk22nmproc -c "/p/hdk/bin/setproj -p ihdk -cfg mig74p0latest"'
+if ( $EC_SITE =~ "png" ) alias iHDK 'wash -n coe73 coe73lay coeenv hdk10nm hdk10nmproc soc soc73 wbiologic pcs hsip sspihip soc73 -c "/p/hdk/bin/setproj -p ihdk -cfg \!:1"'
+alias setupUE 'setup -t hip -w none -d -b usb -ov /nfs/png/disks/png_coe75_disk012/stan70 -n dot0'
+alias opiosetup 'setup -t hip -w none -d -b opi -ov /nfs/png/disks/png_wbio_00040/stan70 -n dot0'
+alias hdksetup 'setup -t design -w none -d -b all -ov \!:1 -n \!:2'
+if ( $?PROJECT ) then
+  if ( $PROJECT =~ "*hdk*" ) then
+    source ~stan70/uesetup.aliases
+  endif
+endif
+
+alias stan70_ion 'nbsession status --target ${EC_SITE}_ion --fields jobid,qslot::10,workstation,interactivedisplay,interactivetype::10,interactivesessionname::20 --sort-by interactivesessionname,interactivetype "user=~'\''stan70'\''"'
+alias slestype 'head -1 /.image'
+setenv IGNORE_CHECK_OT_FILE_CHECK 1
+
