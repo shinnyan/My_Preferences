@@ -96,7 +96,7 @@ if ( $EC_SITE =~ "fm" ) alias iHDK 'wash -n coe73 coe73lay coeenv hdk10nm hdk10n
 if ( $EC_SITE =~ "png" ) alias iHDK 'wash -n coe73 coe73lay coeenv hdk10nm hdk10nmproc soc soc73 wbiologic pcs hsip sspihip soc73 -c "/p/hdk/bin/setproj -p ihdk -cfg \!:1"'
 alias setupUE 'setup -t hip -w none -d -b usb -ov /nfs/png/disks/png_coe75_disk012/stan70 -n dot0'
 alias opiosetup 'setup -t hip -w none -d -b opi -ov /nfs/png/disks/png_wbio_00040/stan70 -n dot0'
-alias hdksetup 'setup -t design -w none -d -b all -ov \!:1 -n \!:2'
+alias hdk_setup 'setup -t design -w none -d -b all -ov \!:1 -n \!:2'
 if ( $?PROJECT ) then
   if ( $PROJECT =~ "*hdk*" ) then
     source ~stan70/uesetup.aliases
