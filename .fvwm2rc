@@ -16,6 +16,9 @@ OpaqueMoveSize 10
 # Focus and placement
 Style * TileCascadePlacement, GrabFocus, NoPPosition
 
+# Not to switch desk when window is open (used with xterm -xrm)
+Style * SkipMapping
+
 # ¥«¡¥¥ë¬500ms°ÊåÆ±¥¥£¥ó¥É¥Ë¢ìÐÎ¥¥£¥ó¥É¥ò«Æ°ÅªË¥ì¥¥º¹ë
 #FvwmAuto       500 Raise Nop
 
