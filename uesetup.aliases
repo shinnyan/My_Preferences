@@ -20,7 +20,7 @@ alias rsync_frm_fm 'rsync --progress -aLvz rsync.fm.intel.com\:\!:1 \!:2'
 #rsync <local path> <fm host>.fm.intel.com:<destination>
 alias rsync_to_fm 'rsync -avz \!:1 \!:2.fm.intel.com\:\!:3'
 set path = ($path ~stan70/scripts ~stan70/scripts/iHDK)
-alias pc '~stan70/scripts/perl_cache.pl \!:1'
+alias pc '~stan70/scripts/perl_cache.pl'
 
 alias setupTool 'source /p/com/env/psetup/prod/bin/setupTool -roam'
 
