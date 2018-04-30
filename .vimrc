@@ -1,3 +1,10 @@
+"trailing whitespace
+highlight ws ctermbg=red guibg=red
+match ws /\s\+$/
+autocmd BufWinEnter * match ws / \+$/
+set listchars=trail:.
+set list
+
 syntax on
 colors delek
 set background=dark
