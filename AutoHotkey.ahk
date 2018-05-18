@@ -213,6 +213,7 @@ LShift & RShift::
 :c:riphub::$IPHUB
 :c:rgrootsie::$CR_HELPER
 :c:rconfigulate::$CONFIGULATE
+:c:rcfgl::$CONFIGULATE_LOCAL
 
 ; Note: From now on whenever you run AutoHotkey directly, this script
 ; will be loaded.  So feel free to customize it to suit your needs.
