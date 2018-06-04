@@ -56,3 +56,16 @@ inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}
+
+"lower case scroll right half page
+map zl zL
+"lowercase scroll left half page
+map zh zH
+
+" tab is indent in normal mode
+nmap <tab> I<tab><esc>
+nmap <s-tab> ^i<bs><esc>
+" comment/uncomment in visual mode
+vmap _c :s/^\(\s*\)/\1#/gi<Enter>
+vmap _C :s/^(\s*\)#/\1/gi<Enter>
+
