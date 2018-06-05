@@ -6,11 +6,15 @@ set listchars=trail:.
 set list
 
 syntax on
-colors delek
-set background=dark
-map <S-F11> :let &background = ( &background == "dark"? "light" : "dark")<CR>
+"colors delek
+"set background=dark
+"map <S-F11> :let &background = ( &background == "dark"? "light" : "dark")<CR>
+" need this to override gnome-terminal color scheme
+set t_Co=256
+color iceberg
 set bs=2
 "set number
+set incsearch
 set hlsearch
 :noremap <S-f10> :set hlsearch!<CR>
 
@@ -29,7 +33,6 @@ set wim=full
 " set 1 column to display fold
 "set foldcolumn=1
 
-set incsearch
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
 :hi search ctermfg=red ctermbg=blue
