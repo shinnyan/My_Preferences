@@ -113,4 +113,5 @@ alias cheetah_setup 'setenv PROJ_TOOLS /p/hdk/pu_tu/prd;\
     setenv HDK_CDS_CONFIG_ROOT /p/hdk/etc;\
     setenv HDK_SCHEMA ${HDK_CHEETAH_BACKBONE}/commonFlow/etc/templates/schema.xml;\
     set path = ($path ${HDK_CHEETAH_BACKBONE}/commonFlow/bin /p/hdk/pu_tu/prd/rtm_flow/cheetah_18.14.6/bin);\
+    setenv HDKPERL /usr/intel/pkgs/perl/5.20.1/bin/perl;\
 '
