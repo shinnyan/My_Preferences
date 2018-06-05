@@ -19,9 +19,16 @@ set hlsearch
 :noremap <S-f10> :set hlsearch!<CR>
 
 " Change tab to spaces
-:set expandtab
+set expandtab
 set tabstop=4
-" set autoindent
+set softtabstop=4
+" Indenting without tab key by 4 space. >> or << in command mode, ctrl-t, ctrl-d in insert mode
+set shiftwidth=4
+
+" Automatic indent
+set autoindent
+set smartindent
+
 :set ignorecase
 :set smartcase
 set scrolloff=2
