@@ -1,0 +1,17 @@
+[alias]
+    ci = commit
+    co = checkout
+    parent = remote show origin
+    root = rev-parse --show-toplevel
+    st = status
+[user]
+    name = Shihpeng Tan
+    email = shih.peng.tan@intel.com
+[color]
+    ui = auto
+[core]
+    excludesfile = /nfs/site/home/stan70/.gitignore
+[https]
+    proxy = https://proxy-chain.intel.com:912
+[http]
+    proxy = https://proxy-chain.intel.com:912
