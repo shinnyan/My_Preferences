@@ -44,7 +44,7 @@ hi! ErrorMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! WarningMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! EndOfBuffer ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
 hi! NonText ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
-hi! SpecialKey ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
+hi! SpecialKey ctermbg=234 ctermfg=Red guibg=#161821 guifg=#242940
 hi! Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
 hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Function ctermfg=216 guifg=#e2a478
