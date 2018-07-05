@@ -29,6 +29,8 @@ set shiftwidth=4
 set autoindent
 set smartindent
 
+set ruler
+
 :set ignorecase
 :set smartcase
 set scrolloff=2
