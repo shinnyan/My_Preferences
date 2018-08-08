@@ -51,6 +51,7 @@ alias opus_rocks 'setenv OPUS_SCH_CFG_DIR $HOME; opus_sch'
 
 # Netbatch
 alias stan70_ion 'nbsession status --target ${EC_SITE}_ion --fields jobid,qslot::10,workstation,interactivedisplay,interactivetype::10,interactivesessionname::20 --sort-by interactivesessionname,interactivetype "user=~'\''$USER'\''"'
+alias stan70_share 'nbsession status --target ${EC_SITE}_ion --fields qslot::10,interactivedisplay::40,interactivesessionname::20,user --sort-by interactivesessionname,interactivetype "InteractiveSharedWith=~'\''stan70'\''"'
 alias nbqstatus 'nbqstat -P ${EC_SITE}_normal user=$USER'
 alias check_nb 'nbqstat --verbose -P ${EC_SITE}_normal slot=/HIP/WBIO/CKT/USB | less;echo '\''Just ran "nbqstat --verbose -P ${EC_SITE}_normal slot=/HIP/WBIO/CKT/USB | less"'\'''
 alias check_nbstat 'nbstatus qslots --target ${EC_SITE}_normal --sort-by Waiting --fields '\''GettingNowCost,Running, Waiting, Name::40, Allocation'\'' "name=~'\''/HIP'\''"; nbstatus qslots --target ${EC_SITE}_express --sort-by Waiting --fields '\''GettingNowCost,Running, Waiting, Name::40, Allocation'\'' "name=~'\''/HIP/'\''"'
@@ -63,8 +64,7 @@ if ( $?IPHUB ) then
   set path = ($path $IPHUB/bin)
 endif
 
-if ( $PROJECT =~ "ihdk" ) then
+if ( $PROJECT =~ "hdk" ) then
 #Bunch of nice coe alias for iHDK
   alias cdw 'cd $WORK_AREA_ROOT_DIR;pwd'
-  set autoexpand
 endif
