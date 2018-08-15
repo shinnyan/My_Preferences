@@ -21,6 +21,7 @@ alias rsync_frm_fm 'rsync --progress -aLvz rsync.fm.intel.com\:\!:1 \!:2'
 alias rsync_to_fm 'rsync -avz \!:1 \!:2.fm.intel.com\:\!:3'
 set path = ($path ~stan70/scripts ~stan70/scripts/iHDK)
 alias pc '~stan70/scripts/perl_cache.pl'
+alias backupfile 'cp -p \!:1{,.bk}'
 
 alias setupTool 'source /p/com/env/psetup/prod/bin/setupTool -roam'
 
@@ -39,7 +40,6 @@ alias convert_time 'echo "\!:1 - \!:2" | bc | awk '\''{printf "%dh:%dm:%ds\n",$0
 alias stopwatch 'bash ~/scripts/stopwatch.bash'
 
 #Noble
-alias what_fails '~/scripts/what_is_failing.tcsh'
 alias PVT '$SQL_TOOLS/bin/blocks_info.pl -table registry_processcorner -header number,name,maxmin,temp,sim_skew,vcore,vsus,v1p05,v1p8,v3p3,v1p24io,v1p35io,extract_skew,noise,process'
 
 alias show_horizontal 'echo '\''ukave Horizontal --project p1273dotx -t c73p4usbtop5pfamilyew --nonetbatch -l c73p4usbtop \\\n--runArea $WARD/kave/kave_horizontal --logfile $WARD/kave/kave_horizontal/kave_horizontal_hor.log \\\n--xls $WARD/intgd/c73p4usbtop5pfamilyew_Integration_Guide.xlsx \\\n--lef $WARD/lef/c73p4usbtop5pfamilyew.lef \\\n--lib 0.75-0.95-tttt-70=$WARD/primetime/analysis_0.75-0.95-tttt-70/c73p4usbtop5pfamilyew_0.75-0.95-tttt-70.lib \\\n--lib 1.1-1.1-tttt-70=$WARD/primetime/analysis_1.1-1.1-tttt-70/c73p4usbtop5pfamilyew_1.1-1.1-tttt-70.lib \\\n--verilog $WARD/c73p4usbtop5pfamilyew/External/models/source/rtl/usbhsip/c73p4usbtop5pfamilyew.v \\\n--upf $WARD/c73p4usbtop5pfamilyew/Internal/upf/c73p4usbtop4pfamilyew.upf\\n--runActions pinCmp, areaCmp,  checkFileName, pgpinRefCmp, pgpinTypeCmp'\'''
@@ -67,4 +67,5 @@ endif
 if ( $PROJECT =~ "hdk" ) then
 #Bunch of nice coe alias for iHDK
   alias cdw 'cd $WORK_AREA_ROOT_DIR;pwd'
+  alias cr 'cd $PROJ_ARCHIVE/central_wards/\!:1/\!:2/all_flow; pwd; set block = \!:2; set block = $block:h; set cr = \!:1'
 endif
