@@ -1,9 +1,11 @@
 banner HELLO
+set autoexpand
+set autolist=ambiguous
 
 # Unix aliases
 alias cwdcmd 'xtset -t -i %U"@"%h": "%D ; set prompt="%{^[[33m%}[%T $TZ]%{^[[44;31;1m%}%U$MY_PROJECT%u%{^[[1;33m%}:%{^[[32m%}%c2%{^[[31;1m%}%#%{^[[0m%} "; source ~stan70/uesetup.tcsh'
-
 cd .
+
 #alias du_sort 'du -ks * | sort -nr | cut -f2 | xargs -d "\n" du -sh'
 alias du_sort 'find . -maxdepth 1 ! -name "." -exec du -ks {} \; | sort -nr | cut -f2 | xargs -d "\n" du -sh'
 alias grep 'grep --color'
@@ -68,4 +70,5 @@ if ( $PROJECT =~ "hdk" ) then
 #Bunch of nice coe alias for iHDK
   alias cdw 'cd $WORK_AREA_ROOT_DIR;pwd'
   alias cr 'cd $PROJ_ARCHIVE/central_wards/\!:1/\!:2/all_flow; pwd; set block = \!:2; set block = $block:h; set cr = \!:1'
+  alias ed '$IPHUB/bin/sql_dbedit.pl -servertoken $PROJECT'
 endif
