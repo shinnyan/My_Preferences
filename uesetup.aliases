@@ -66,7 +66,7 @@ if ( $?IPHUB ) then
   set path = ($path $IPHUB/bin)
 endif
 
-if ( $PROJECT =~ "hdk" ) then
+if ( $PROJECT =~ "*hdk" ) then
 #Bunch of nice coe alias for iHDK
   alias cdw 'cd $WORK_AREA_ROOT_DIR;pwd'
   alias cr 'cd $PROJ_ARCHIVE/central_wards/\!:1/\!:2/all_flow; pwd; set block = \!:2; set block = $block:h; set cr = \!:1'
