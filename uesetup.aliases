@@ -71,4 +71,6 @@ if ( $PROJECT =~ "*hdk" ) then
   alias cdw 'cd $WORK_AREA_ROOT_DIR;pwd'
   alias cr 'cd $PROJ_ARCHIVE/central_wards/\!:1/\!:2/all_flow; pwd; set block = \!:2; set block = $block:h; set cr = \!:1'
   alias ed '$IPHUB/bin/sql_dbedit.pl -servertoken $PROJECT'
+  #this assumes i have this script at home
+  alias waiting_pattern 'waiting_pattern.tcsh \!:* &'
 endif
