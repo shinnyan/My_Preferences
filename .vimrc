@@ -81,3 +81,6 @@ nmap <s-tab> ^i<bs><esc>
 vmap _c :s/^\(\s*\)/\1#/gi<Enter>
 vmap _C :s/^(\s*\)#/\1/gi<Enter>
 
+" Prevent vim from trying to connect to the X server when connecting ssh which is slow
+"set clipboard=autoselect,exclude:cons\\\|linux\\\|screen
+set clipboard=exclude:.*
