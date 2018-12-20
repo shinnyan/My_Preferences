@@ -58,12 +58,14 @@ set prompt="%{^[[44;32;1m%}%U%n%u%{^[[1;33m%}@%{^[[1;31m%}%m%{^[[1;33m%}:%{^[[34
 
 alias new_vnc 'vncserver -geometry 1920x1080 -depth 24 -r -randr 1920x1080,800x600,1024x768,1152x824,1280x1024,1400x1050,1600x900,1600x1200,1920x1200,3520x900,3520x1200,3520x1100 -alwaysshared'
 # list file only / list dir
+alias mkdir 'mkdir -p'
+alias htail '( head ; tail ) < \!:1'
 alias lf 'ls -l|egrep -v '^d''
 alias ldir 'ls -l|egrep '^d''
-alias setupTool 'source /p/com/env/psetup/prod/bin/setupTool -roam'
 alias stopwatch 'bash ~/scripts/stopwatch.bash'
 
 alias coe69d8 '/p/cse/proc/cad/toolsetup.pl -p coe69all -config dot8 -b allsch -t opus_sch -d -w sch -ov /nfs/png/disks/png_coe69_disk071/stan70 -ot tool_overrides.ot'
+alias setupTool 'source /p/com/env/psetup/prod/bin/setupTool -roam'
 
 alias coe714 '/p/socenv/cents/proc/bin/toolsetup.pl -p coe71 -config dot4_ann -b allsch -t opus_sch -d -w sch'
 #alias 32nmopifev '/p/cse/proc/cad/toolsetup.pl -p coe69all -config dot8 -t opus_sch -d -w sch -ov /nfs/png/disks/png_coe69_disk066/stan70 -at formal'
@@ -94,14 +96,14 @@ if ($EC_SITE =~ "imu") alias hdk_setproj 'wash -n n7 tstn7lynxg exs dpfe hdk10nm
 if ($EC_SITE =~ "iind") alias hdk_setproj 'wash -n n7blr p1273blr exs hdk10nm hdk10nmproc soc soc73 soc73proc xg816beg xg806beg coe73 coe73lay coeenv -c "/p/hdk/bin/setproj -p \!:1 -cfg \!:2"'
 #alias setupUE 'setup -t hip -w none -d -b usb -ov /nfs/png/disks/png_coe75_disk012/stan70 -n dot0'
 #alias opiosetup 'setup -t hip -w none -d -b opi -ov /nfs/png/disks/png_wbio_00040/stan70 -n dot0'
-alias hdk_setup 'setup -t design -w none -d -b all -ov \!:1 -n \!:2'
-alias hdk_envsetup '/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4'
-if ($EC_SITE =~ "fm") alias hdk_envsetup 'wash -n coe73 coe73lay coeenv hdk10nm hdk10nmproc soc soc73 hdk22nm hdk22nmproc -c "/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4"'
-if ($EC_SITE =~ "png") alias hdk_envsetup 'wash -n coe73 coe73lay coeenv hdk10nm hdk10nmproc soc soc73 hdk22nm hdk22nmproc tgp icp -c "/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4"'
-if ($EC_SITE =~ "pdx") alias hdk_envsetup 'wash -n dt_users hdk10nm hdk10nmproc soc soc73 hdk22nm hdk22nmproc tgl srvr10nm -c "/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4"'
-if ($EC_SITE =~ "sc") alias hdk_envsetup 'wash -n hdk10nm hdk10nmproc soc soc73 tgp srvr10nm xg816beg xg806beg n7na -c "/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4"'
-if ($EC_SITE =~ "imu" || $EC_SITE =~ "xa") alias hdk_envsetup 'wash -n n7 tstn7lynxg exs dpfe hdk10nm hdk10nmproc soc soc73 soc73proc xg816beg xg806beg -c "/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4"'
-if ($EC_SITE =~ "iind") alias hdk_envsetup 'wash -n n7blr p1273blr exs hdk10nm hdk10nmproc soc soc73 soc73proc xg816beg xg806beg coe73 coe73lay coeenv -c "/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4"'
+alias hdk_setup 'setup -t design -w none -d -b all -ov \!:1 -n \!:2*'
+alias hdk_envsetup '/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'
+if ($EC_SITE =~ "fm") alias hdk_envsetup 'wash -n coe73 coe73lay coeenv hdk10nm hdk10nmproc soc soc73 hdk22nm hdk22nmproc -c '\''/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'\'''
+if ($EC_SITE =~ "png") alias hdk_envsetup 'wash -n coe73 coe73lay coeenv hdk10nm hdk10nmproc soc soc73 hdk22nm hdk22nmproc tgp icp -c '\''/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'\'''
+if ($EC_SITE =~ "pdx") alias hdk_envsetup 'wash -n dt_users hdk10nm hdk10nmproc soc soc73 hdk22nm hdk22nmproc tgl srvr10nm -c '\''/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'\'''
+if ($EC_SITE =~ "sc") alias hdk_envsetup 'wash -n hdk10nm hdk10nmproc soc soc73 tgp srvr10nm xg816beg xg806beg n7na -c '\''/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'\'''
+if ($EC_SITE =~ "imu" || $EC_SITE =~ "xa") alias hdk_envsetup 'wash -n n7 tstn7lynxg exs dpfe hdk10nm hdk10nmproc soc soc73 soc73proc xg816beg xg806beg -c '\''/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'\'''
+if ($EC_SITE =~ "iind") alias hdk_envsetup 'wash -n n7blr p1273blr exs hdk10nm hdk10nmproc soc soc73 soc73proc xg816beg xg806beg coe73 coe73lay coeenv -c '\''/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'\'''
 if ( $?PROJECT ) then
   if ( $PROJECT =~ "*hdk*" ) then
     source ~stan70/uesetup.aliases
