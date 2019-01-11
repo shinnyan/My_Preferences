@@ -111,7 +111,7 @@ if ( $?PROJECT ) then
 endif
 
 alias stan70_ion 'nbsession status --target ${EC_SITE}_ion --fields jobid,qslot::10,workstation,interactivedisplay,interactivetype::10,interactivesessionname::20 --sort-by interactivesessionname,interactivetype "user=~'\''stan70'\''"'
-alias stan70_share 'nbsession status --target ${EC_SITE}_ion --fields qslot::10,interactivedisplay::40,interactivesessionname::20,user --sort-by User,interactivesessionname "InteractiveSharedWith=~'\''stan70'\''"'
+alias stan70_share 'nbsession status --target ${EC_SITE}_ion --fields qslot::10,interactivedisplay::40,interactivesessionname::20,user --sort-by User,interactivesessionname "InteractiveSharedWith=~'\''stan70:d'\''"'
 alias slestype 'head -1 /.image'
 setenv IGNORE_CHECK_OT_FILE_CHECK 1
 
