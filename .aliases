@@ -97,7 +97,7 @@ if ($EC_SITE =~ "iind") alias hdk_setproj 'wash -n n7blr p1273blr exs hdk10nm hd
 #alias setupUE 'setup -t hip -w none -d -b usb -ov /nfs/png/disks/png_coe75_disk012/stan70 -n dot0'
 #alias opiosetup 'setup -t hip -w none -d -b opi -ov /nfs/png/disks/png_wbio_00040/stan70 -n dot0'
 alias hdk_setup 'setup -t design -w none -d -b all -ov \!:1 -n \!:2*'
-alias hdk_envsetup '/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'
+alias hdk_envsetup '/p/hdk/bin/envsetup -skipgroupfail -skipselfcheck -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'
 if ($EC_SITE =~ "fm") alias hdk_envsetup 'wash -n coe73 coe73lay coeenv hdk10nm hdk10nmproc soc soc73 hdk22nm hdk22nmproc -c '\''/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'\'''
 if ($EC_SITE =~ "png") alias hdk_envsetup 'wash -n coe73 coe73lay coeenv hdk10nm hdk10nmproc soc soc73 hdk22nm hdk22nmproc tgp icp -c '\''/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'\'''
 if ($EC_SITE =~ "pdx") alias hdk_envsetup 'wash -n dt_users hdk10nm hdk10nmproc soc soc73 hdk22nm hdk22nmproc tgl srvr10nm -c '\''/p/hdk/bin/envsetup -skipgroupfail -p \!:1 -cfg \!:2 -d -b all -ov \!:3 -n \!:4*'\'''
