@@ -132,16 +132,19 @@ if ($EC_SITE =~ 'sc') then
     alias p4_pesgp4 'p4 -p scyhdk03.sc.intel.com:1666 \!:*'
     alias p4_mev 'p4 -p ssl:p4mevsce.sync.intel.com:3030 \!:*'
     alias p4_rcr 'p4 -p ssl:p4rcrsc1e.sync.intel.com:2020 \!:*'
+    alias p4_mtl 'p4 -p ssl:p4mtpsce.sync.intel.com:6160 \!:*'
 endif
 if ($EC_SITE =~ 'png') then
     alias p4_ddm 'p4 -p ssl:p4ddmpnge.sync.intel.com:3230 \!:*'
     alias p4_pesgp4 'p4 -p scyhdk03.sc.intel.com:1666 \!:*'
     alias p4_mev 'p4 -p ssl:p4mevpnge.sync.intel.com:3030 \!:*'
     alias p4_rcr 'p4 -p ssl:p4rcrbae.sync.intel.com:2020 \!:*'
+    alias p4_mtl 'p4 -p ssl:p4mtppnge.sync.intel.com:6160 \!:*'
 endif
 if ($EC_SITE =~ 'iind') then
     alias p4_ddm 'p4 -p ssl:p4ddmbae.sync.intel.com:3230 \!:*'
     alias p4_pesgp4 'p4 -p scyhdk03.sc.intel.com:1666 \!:*'
     alias p4_mev 'p4 -p ssl:p4mevbae.sync.intel.com:3030 \!:*'
     alias p4_rcr 'p4 -p ssl:p4rcrbae.sync.intel.com:2020 \!:*'
+    alias p4_mtl 'p4 -p ssl:p4mtppnge.sync.intel.com:6160 \!:*'
 endif
