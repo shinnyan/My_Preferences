@@ -120,8 +120,8 @@ alias cheetah_setup 'setenv PROJ_TOOLS /p/hdk/pu_tu/prd;\
     setenv HDK_CHEETAH_BACKBONE /p/hdk/pu_tu/prd/backboneinfra/stan70_sbox;\
     setenv HDK_CDS_CONFIG_ROOT /p/hdk/etc;\
     setenv HDK_SCHEMA ${HDK_CHEETAH_BACKBONE}/commonFlow/etc/templates/schema.xml;\
-    set path = ($path ${HDK_CHEETAH_BACKBONE}/commonFlow/bin /p/hdk/pu_tu/prd/rtm_flow/cheetah_18.14.6/bin);\
-    setenv HDKPERL /usr/intel/pkgs/perl/5.20.1/bin/perl;\
+    set path = ($path ~/scripts ${HDK_CHEETAH_BACKBONE}/commonFlow/bin /p/hdk/pu_tu/prd/rtm_flow/cheetah_18.14.6/bin);\
+    setenv CTHPERL /usr/intel/pkgs/perl/5.26.1/bin/perl;\
 '
 
 alias crt_setup 'source /nfs/site/disks/crt_linktree_1/crt/latest/setup/crt.setup'
