@@ -1,0 +1,3 @@
+# intended as global ignore
+.*.swp
+.*.swo

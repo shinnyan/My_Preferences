@@ -128,6 +128,7 @@ alias cheetah_setup 'setenv PROJ_TOOLS /p/hdk/pu_tu/prd;\
 alias crt_setup 'source /nfs/site/disks/crt_linktree_1/crt/latest/setup/crt.setup'
 
 # Perforce
+setenv P4IGNORE ~/.p4ignore
 if ($EC_SITE =~ 'sc') then
     alias p4_ddm 'p4 -p ssl:p4ddmsce.sync.intel.com:3230 \!:*'
     alias p4_pesgp4 'p4 -p scyhdk03.sc.intel.com:1666 \!:*'
