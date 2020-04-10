@@ -155,3 +155,5 @@ if ($EC_SITE =~ 'iind') then
     alias p4_rcr 'p4 -p ssl:p4rcrbae.sync.intel.com:2020 \!:*'
     alias p4_mtl 'p4 -p ssl:p4mtppnge.sync.intel.com:6160 \!:*'
 endif
+
+alias get_changeId 'curl -o .git/hooks/commit-msg https://git-amr-3.devtools.intel.com/gerrit/tools/hooks/commit-msg && chmod +x .git/hooks/commit-msg'
