@@ -43,6 +43,7 @@ alias pnglogic 'ssh png-login.png.intel.com'
 alias shell 'exec /usr/intel/bin/tcsh -f'
 
 alias grep 'grep --color'
+alias l 'ls -ltr'
 # set xterm title to current dir
 alias cwdcmd 'xtset -t -i %U"@"%h": "%D'
 #alias cwdcmd 'xtermset -T $USER"@"$HOST": "$PWD -n $HOST": "$PWD'
@@ -52,6 +53,8 @@ if ( $HOST =~ "pglnoble*") then
     bindkey -v
 endif
 if ( $EC_SITE =~ "sc") bindkey -v
+if ( $EC_SITE =~ "iil") bindkey -v
+if ( $EC_SITE =~ "iind") bindkey -v
 
 #blinking ">" prompt
 #set prompt="%{^[[44;32;1m%}%U%n%u%{^[[1;33m%}@%{^[[1;31m%}%m%{^[[1;33m%}:%{^[[34m%}%c2 %{^[[0;32m%}%\!%{^[[1;5m%}%#%{^[[0m%} "
@@ -128,12 +131,13 @@ setenv IGNORE_CHECK_OT_FILE_CHECK 1
 
 # Arc
 alias setup_arc 'setenv ARC /p/hdk/pu_tu/prd/arc/20.01.009'
-alias mev_wash ' wash -g mev -n n7 n7fe mev mev_exb mev_exd mtl mtlsbe' 
-alias mev_admin 'setenv ADMINDISK /nfs/site/disks/mev.arc.admin'
-alias mev_archive 'setenv /nfs/site/disks/mev.arc.proj_archive'
+alias setup_noble 'setenv NOBLE /p/hdk/pu_tu/prd/noble/20.01.004'
+alias mev_wash ' wash -g mev -n n7 n7fe mev mev_exb mev_exd mtl mtlsbe'
+alias mev_admin 'echo /nfs/site/disks/mev.arc.admin'
+alias mev_archive 'echo /nfs/site/disks/mev.arc.proj_archive'
 alias tbh_wash 'wash -n soc tbh n7'
-alias tbh_admin 'setenv ADMINDISK /nfs/site/disks/thb.arc.admin'
-alias tbh_archive 'setenv /nfs/site/disks/thb.arc.proj_archive'
+alias tbh_admin 'echo /nfs/site/disks/thb.arc.admin'
+alias tbh_archive 'echo /nfs/site/disks/thb.arc.proj_archive'
 
 alias crt_setup 'source /nfs/site/disks/crt_linktree_1/crt/latest/setup/crt.setup'
 
