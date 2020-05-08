@@ -132,7 +132,7 @@ setenv IGNORE_CHECK_OT_FILE_CHECK 1
 # Arc
 alias setup_arc 'setenv ARC /p/hdk/pu_tu/prd/arc/20.01.009'
 alias setup_noble 'setenv NOBLE /p/hdk/pu_tu/prd/noble/20.01.004'
-alias mev_wash ' wash -g mev -n n7 n7fe mev mev_exb mev_exd mtl mtlsbe'
+alias mev_wash ' wash -g mev -n soc n7 n7fe mev mev_exb mev_exd mtl mtlsbe'
 alias mev_admin 'echo /nfs/site/disks/mev.arc.admin'
 alias mev_archive 'echo /nfs/site/disks/mev.arc.proj_archive'
 alias tbh_wash 'wash -n soc tbh n7'
