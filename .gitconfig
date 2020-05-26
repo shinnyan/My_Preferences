@@ -1,0 +1,38 @@
+[alias]
+	ci = commit
+	co = checkout
+	parent = remote show origin
+	root = rev-parse --show-toplevel
+	st = status
+[color]
+	ui = auto
+[core]
+#	pager = less -FRSX #commented away so git log prints to cache
+	preloadindex = true
+    #gitproxy = none for intel.com
+    #gitproxy = /home/stan70/bin/gitproxy
+[diff]
+	mnemonicprefix = true
+	renames = true
+[intel]
+	userInitVersion = 1
+[log]
+	decorate = true
+    abbrevCommit = yes
+[merge]
+	conflictstyle = diff3
+[pack]
+	threads = 0
+[push]
+	default = tracking
+[user]
+	email = shih.peng.tan@intel.com
+	name = Tan, Shih Peng
+#[https]
+#    proxy = https://proxy-chain.intel.com:912
+#[http]
+#    proxy = https://proxy-chain.intel.com:912
+[http]
+	proxy = http://proxy-dmz.intel.com:911
+[https]
+	proxy = http://proxy-dmz.intel.com:912
