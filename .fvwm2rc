@@ -4,8 +4,9 @@
 
 # fvwm Œ•‚••Â°•Î°¢•¢••≥•ÛŒ•—•π°£: «∂Ë¿⁄√∆ £øÙÒØ≥»¨«≠Î
 #ModulePath      /usr/lib/X11/fvwm2
-PixmapPath      /usr/local/X11R6.4/include/X11/pixmaps/
-IconPath        /usr/local/X11R6.4/include/X11/bitmaps/
+PixmapPath      /usr/intel/common/pkgs/icons/
+IconPath        /usr/intel/common/pkgs/icons/
+ImagePath       /usr/intel/common/pkgs/icons/:+
 
 # Snap
 SnapAttraction 10 All Screen
@@ -79,8 +80,8 @@ Style "*"           Icon xlogo32, Color white/#3454aa
 Style "*"           BorderWidth 5, HandleWidth 5
 #Style "*"           MWMFunctions, MWMDecor, HintOverride
 Style "*"           MWMFunctions, MWMButtons, MWMBorder, MWMDecor
-#Style "*"           IconBox 0 -10 -280 -1
-Style "*"           DecorateTransient, IconBox -100 10 -1 -1
+Style "*"           IconBox none
+#Style "*"           DecorateTransient, IconBox -100 10 -1 -1
 # FocusFollowsMouse •ﬁ••π¨••£•Û•…•ŒÂÀØÎ»•¢•Ø•∆•£•÷À Î°£ø¿∑•ø••»•Î•–°Ú•Ø•Í•√•Ø∑ »¡∞ÃÃÀ≥ 
 # ClickToFocus      ••£•Û•…•Œπ•≠ ÍÚ•Ø•Í•√•ØπÎ»°¢•¢•Ø•∆•£•÷À Í¡∞ÃÃÀØÎ°£
 #Style "*"           FocusFollowsMouse
@@ -103,7 +104,7 @@ Style "FvwmIconBox" CirculateHit, WindowListHit
 Style "FvwmBanner"  StaysOnTop
 # terminal Œ•π•ø••Î
 #Style "*term"       Icon xterm.xpm, MiniIcon mini-xterm.xpm, SloppyFocus, IconBox -70 1 -1 -140
-Style "*term"       Icon xterm.xpm, MiniIcon mini-xterm.xpm, IconBox -70 1 -1 -140
+Style "*term"       Icon xterm.xpm, MiniIcon mini-xterm.xpm, IconBox 10 1 600 400
 #Style "rxvt"        Icon term.xpm, MiniIcon mini-xterm.xpm, SloppyFocus, IconBox -70 1 -1 -140
 Style "rxvt"        Icon term.xpm, MiniIcon mini-xterm.xpm, IconBox -70 1 -1 -140
 Style "rxvt"        MWMBorder, MWMButtons
@@ -245,6 +246,7 @@ Mouse 3 R       A       Menu RootMenu Nop
 #   for the title bar buttons
 #   •ø••»•Î•–°«Œ•ﬁ••π¡‡∫Ó
 Mouse 0 1       A       Menu Window-Ops2 Close
+Mouse 0 3       A       WindowShade
 Mouse 0 2       A       Maximize 100 100
 Mouse 0 4       A       Iconify
 
