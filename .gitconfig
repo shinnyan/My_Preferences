@@ -11,6 +11,7 @@
 	preloadindex = true
     #gitproxy = none for intel.com
     #gitproxy = /home/stan70/bin/gitproxy
+    excludesfile = /nfs/site/home/stan70/.gitignore
 [diff]
 	mnemonicprefix = true
 	renames = true
