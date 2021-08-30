@@ -67,6 +67,7 @@ alias mkdir 'mkdir -p'
 alias htail '( head ; tail ) < \!:1'
 alias lf 'ls -l|egrep -v '^d''
 alias ldir 'ls -l|egrep '^d''
+set time = ( 10 "-I- : CPUSystemTime: %S  CPUUserTime: %U  ElapsedTime: %E  MemoryUse: %M" )
 alias stopwatch 'bash ~/scripts/stopwatch.bash'
 
 alias coe69d8 '/p/cse/proc/cad/toolsetup.pl -p coe69all -config dot8 -b allsch -t opus_sch -d -w sch -ov /nfs/png/disks/png_coe69_disk071/stan70 -ot tool_overrides.ot'
@@ -165,4 +166,6 @@ if ($EC_SITE =~ 'iind') then
     alias p4_mtl 'p4 -p ssl:p4mtppnge.sync.intel.com:6160 \!:*'
 endif
 
+# Gerrit
 alias get_changeId 'curl -o .git/hooks/commit-msg https://git-amr-3.devtools.intel.com/gerrit/tools/hooks/commit-msg && chmod +x .git/hooks/commit-msg'
+alias gerrit_change 'curl -s --request GET --user stan70 "https://git-amr-3.devtools.intel.com/gerrit/a/changes/?q=status:open+AND+reviewer:shih.peng.tan@intel.com" | sed 1d | jq --raw-output ".[] | .project, ._number, .subject"'
